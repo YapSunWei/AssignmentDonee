@@ -15,14 +15,14 @@
         android:text="@string/donee_information"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestIdTxt" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/firstNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:text="@string/first_name"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +32,8 @@
         android:id="@+id/lastNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="35dp"
         android:text="@string/last_name"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/firstNameTxt"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="75dp"
         android:text="@string/address"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/zipTxt" />
 
     <EditText
-        android:id="@+id/editTextPhoneNo"
+        android:id="@+id/editTextPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -166,7 +166,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reasonTxt" />
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -188,17 +188,7 @@
         android:text="@string/cancel"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
-
-    <Spinner
-        android:id="@+id/spinnerState"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:entries="@array/states"
-        app:layout_constraintStart_toEndOf="@+id/editTextCity"
-        app:layout_constraintTop_toBottomOf="@+id/stateTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
 
     <EditText
         android:id="@+id/editTextCity"
@@ -224,11 +214,35 @@
         app:layout_constraintTop_toBottomOf="@+id/addressTxt" />
 
     <TextView
-        android:id="@+id/requestIdTxt"
+        android:id="@+id/txtID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/ID"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/formTitle"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextID"
+        android:layout_width="94dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/txtID"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextState"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/editTextCity"
+        app:layout_constraintTop_toBottomOf="@+id/stateTxt" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

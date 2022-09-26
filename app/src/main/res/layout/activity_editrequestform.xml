@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="70dp"
-        android:text="@string/donee_information_edit"
+        android:text="@string/donee_information"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:text="@string/first_name_edit"
+        android:text="@string/first_name"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formTitle" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="30dp"
-        android:text="@string/last_name_edit"
+        android:text="@string/last_name"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/firstNameTxt"
         app:layout_constraintTop_toBottomOf="@+id/formTitle" />
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="60dp"
-        android:text="@string/address_edit"
+        android:text="@string/address"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstNameTxt" />
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
-        android:text="@string/zip_edit"
+        android:text="@string/zip"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressTxt" />
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
         android:layout_marginTop="70dp"
-        android:text="@string/state_edit"
+        android:text="@string/state"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/cityTxt"
         app:layout_constraintTop_toBottomOf="@+id/addressTxt" />
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
-        android:text="@string/phone_number_edit"
+        android:text="@string/phone_number"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zipTxt" />
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="80dp"
-        android:text="@string/reason_of_requesting_item_edit"
+        android:text="@string/reason_of_requesting_item"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneNoTxt" />
@@ -143,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/zipTxt" />
 
     <EditText
-        android:id="@+id/editTextPhoneNo"
+        android:id="@+id/editTextPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -167,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reasonTxt" />
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -186,10 +186,10 @@
         android:layout_marginStart="175dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/white"
-        android:text="@string/cancel_edit"
+        android:text="@string/cancel"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
 
     <Spinner
         android:id="@+id/spinnerState"
@@ -219,7 +219,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="70dp"
-        android:text="@string/city_edit"
+        android:text="@string/city"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/zipTxt"
         app:layout_constraintTop_toBottomOf="@+id/addressTxt" />

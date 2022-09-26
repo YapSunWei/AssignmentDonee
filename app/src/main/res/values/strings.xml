@@ -13,17 +13,8 @@
     <string name="cancel">Cancel</string>
     <string name="city">City</string>
     <string name="edit">Edit</string>
-    <string name="donee_information_edit">Donee Information</string>
-    <string name="first_name_edit">First Name</string>
-    <string name="last_name_edit">Last Name</string>
-    <string name="address_edit">Address</string>
-    <string name="zip_edit">Zip</string>
-    <string name="state_edit">State</string>
-    <string name="phone_number_edit">Phone Number</string>
-    <string name="reason_of_requesting_item_edit">Reason Of Requesting Item</string>
     <string name="saveChanges">Save Changes</string>
-    <string name="cancel_edit">Cancel</string>
-    <string name="city_edit">City</string>
+    <string name="ID">ID</string>
     <string-array name="states">
         <item>Perak</item>
         <item>Sabah</item>
