@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="70dp"
-        android:text="Donee Information"
+        android:text="@string/donee_information_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:text="First Name"
+        android:text="@string/first_name_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formTitle" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="30dp"
-        android:text="Last Name"
+        android:text="@string/last_name_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/firstNameTxt"
         app:layout_constraintTop_toBottomOf="@+id/formTitle" />
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="60dp"
-        android:text="Address"
+        android:text="@string/address_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstNameTxt" />
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
-        android:text="Zip"
+        android:text="@string/zip_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressTxt" />
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
         android:layout_marginTop="70dp"
-        android:text="State"
+        android:text="@string/state_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/cityTxt"
         app:layout_constraintTop_toBottomOf="@+id/addressTxt" />
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
-        android:text="Phone Number"
+        android:text="@string/phone_number_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zipTxt" />
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="80dp"
-        android:text="Reason Of Requesting Item"
+        android:text="@string/reason_of_requesting_item_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneNoTxt" />
@@ -101,7 +101,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="First Name"
         android:inputType="textPersonName"
         android:textColorHint="#686666"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +113,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Last Name"
         android:inputType="textPersonName"
         android:textColorHint="#686666"
         app:layout_constraintStart_toEndOf="@+id/editTextFirstName"
@@ -127,7 +125,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Address"
         android:inputType="textPersonName"
         android:textColorHint="#686666"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +137,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Zip"
         android:inputType="textPersonName"
         android:textColorHint="#686666"
         app:layout_constraintStart_toStartOf="parent"
@@ -153,7 +149,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Phone Number"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColorHint="#686666"
@@ -172,14 +167,14 @@
         app:layout_constraintTop_toBottomOf="@+id/reasonTxt" />
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/teal"
         android:outlineProvider="none"
-        android:text="Submit"
+        android:text="@string/saveChanges"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextReason" />
@@ -188,13 +183,13 @@
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
+        android:layout_marginStart="175dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/white"
-        android:text="Cancel"
+        android:text="@string/cancel_edit"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
 
     <Spinner
         android:id="@+id/spinnerState"
@@ -213,7 +208,6 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="City"
         android:inputType="textPersonName"
         android:textColorHint="#686666"
         app:layout_constraintStart_toEndOf="@+id/editTextZip"
@@ -225,7 +219,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="70dp"
-        android:text="City"
+        android:text="@string/city_edit"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/zipTxt"
         app:layout_constraintTop_toBottomOf="@+id/addressTxt" />

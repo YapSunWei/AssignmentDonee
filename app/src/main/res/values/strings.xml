@@ -9,16 +9,21 @@
     <string name="state">State</string>
     <string name="phone_number">Phone Number</string>
     <string name="reason_of_requesting_item">Reason Of Requesting Item</string>
-    <string name="hint_first_name">First Name</string>
-    <string name="hint_last_name">Last Name</string>
-    <string name="hint_address">Address</string>
-    <string name="hint_zip">Zip</string>
-    <string name="hint_phone_number">Phone Number</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
-    <string name="hint_city">City</string>
     <string name="city">City</string>
-    <string name="btnEdit">Edit</string>
+    <string name="edit">Edit</string>
+    <string name="donee_information_edit">Donee Information</string>
+    <string name="first_name_edit">First Name</string>
+    <string name="last_name_edit">Last Name</string>
+    <string name="address_edit">Address</string>
+    <string name="zip_edit">Zip</string>
+    <string name="state_edit">State</string>
+    <string name="phone_number_edit">Phone Number</string>
+    <string name="reason_of_requesting_item_edit">Reason Of Requesting Item</string>
+    <string name="saveChanges">Save Changes</string>
+    <string name="cancel_edit">Cancel</string>
+    <string name="city_edit">City</string>
     <string-array name="states">
         <item>Perak</item>
         <item>Sabah</item>
