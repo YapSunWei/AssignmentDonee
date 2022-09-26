@@ -15,6 +15,12 @@
     <string name="edit">Edit</string>
     <string name="saveChanges">Save Changes</string>
     <string name="ID">ID</string>
+    <string name="request_id">requestID</string>
+    <string name="firstName">requestFirstName</string>
+    <string name="lastName">requestLastName</string>
+    <string name="requestID">Request ID:</string>
+    <string name="requestFirstName">First Name:</string>
+    <string name="requestLastName">Last Name:</string>
     <string-array name="states">
         <item>Perak</item>
         <item>Sabah</item>
