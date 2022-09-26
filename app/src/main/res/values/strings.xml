@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Assignment(Donee)</string>
+    <string name="request">Request</string>
+    <string name="donee_information">Donee Information</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="zip">Zip</string>
+    <string name="state">State</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="reason_of_requesting_item">Reason Of Requesting Item</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_zip">Zip</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="hint_city">City</string>
+    <string name="city">City</string>
+    <string name="btnEdit">Edit</string>
+    <string-array name="states">
+        <item>Perak</item>
+        <item>Sabah</item>
+        <item>Kedah</item>
+        <item>Negeri Sembilan</item>
+        <item>Pahang</item>
+        <item>Selangor</item>
+        <item>Perlis</item>
+        <item>Sarawak</item>
+        <item>Johor</item>
+        <item>Terengganu</item>
+        <item>Malacca</item>
+        <item>Kelantan</item>
+        <item>Penang</item>
+    </string-array>
 </resources>
