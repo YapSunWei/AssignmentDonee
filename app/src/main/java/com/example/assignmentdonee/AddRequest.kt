@@ -62,7 +62,7 @@ class AddRequest : AppCompatActivity() {
                         try {
                             progressDialog.cancel()
                             Toast.makeText(this@AddRequest, response, Toast.LENGTH_LONG).show()
-                            val i = Intent(this@AddRequest, MainActivity::class.java)
+                            val i = Intent(this@AddRequest, RequestManagement::class.java)
                             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                             startActivity(i)
 

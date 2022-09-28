@@ -20,11 +20,12 @@ import com.example.assignmentdonee.model.Requests
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonParser
+import kotlinx.android.synthetic.main.activity_requestdescription.*
 
 
 import java.util.HashMap
 
-import kotlinx.android.synthetic.main.request_list.*
+
 
 class RequestDetails:AppCompatActivity() {
     internal lateinit var progressDialog:ProgressDialog
@@ -36,7 +37,7 @@ class RequestDetails:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState:Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.request_list)
+        setContentView(R.layout.activity_requestdescription)
 
         bundle=intent.extras
         queue = Volley.newRequestQueue(this)
@@ -116,7 +117,6 @@ class RequestDetails:AppCompatActivity() {
                     val mJson = jsonParser.parse(response) as JsonArray
                     requests = gson.fromJson<Requests>(mJson.get(0), Requests::class.java)
 
-
                     txtmodelo.text = requests.requestID
                     txtcor.text = requests.requestFirstName
                     txtano.text = requests.requestLastName
@@ -137,7 +137,7 @@ class RequestDetails:AppCompatActivity() {
 
                 progressDialog.cancel()
                 Toast.makeText(this@RequestDetails,
-                    "Problema na comunicação com o servidor!",
+                    "Problem Communicating to server333",
                     Toast.LENGTH_LONG).show()
             }) {
 

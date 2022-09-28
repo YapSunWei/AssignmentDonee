@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.request_list.*
 
 import com.android.volley.*
 import com.android.volley.toolbox.JsonObjectRequest
@@ -19,7 +19,6 @@ import com.example.assignmentdonee.model.Requests
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonParser
-import kotlinx.android.synthetic.main.item_description.*
 import java.util.HashMap
 
 class RequestManagement : AppCompatActivity() {
@@ -54,7 +53,7 @@ class RequestManagement : AppCompatActivity() {
     fun carregarLista() {
         val URL: String = "http://192.168.0.117/request/readRequest.php"
         requestsList.clear()
-        val stringRequests =object : StringRequest(Request.Method.POST,
+        val stringRequests = object : StringRequest(Request.Method.POST,
             URL, Response.Listener { response ->
                 try {
 
@@ -80,7 +79,7 @@ class RequestManagement : AppCompatActivity() {
 
                     veiculosListView.setOnItemClickListener { _, view, position, _ ->
                         val i = Intent(view.context, RequestDetails::class.java)
-                        i.putExtra("ID", requestsList[position].ID)
+                        i.putExtra("ID", requestsList[position].requestID)
                         view.context.startActivity(i)
                     }
 
@@ -123,6 +122,8 @@ class RequestManagement : AppCompatActivity() {
         finish()
 
     }
+
+
 }
 
 

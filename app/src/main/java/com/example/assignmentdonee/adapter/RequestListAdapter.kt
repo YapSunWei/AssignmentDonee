@@ -22,7 +22,7 @@ class RequestListAdapter(private var activity: Activity, private var items: Arra
         var txtTitle: TextView? = null
 
         init {
-            this.txtTitle = row?.findViewById(R.id.textModelo)
+            this.txtTitle = row?.findViewById(R.id.txtmodelo)
         }
     }
 
@@ -32,7 +32,7 @@ class RequestListAdapter(private var activity: Activity, private var items: Arra
         val viewHolder: ViewHolder
         if (convertView == null) {
             val inflater = activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = inflater.inflate(R.layout.request_list, null)
+            view = inflater.inflate(R.layout.activity_requestdescription, null)
             viewHolder = ViewHolder(view)
             view?.tag = viewHolder
         } else {

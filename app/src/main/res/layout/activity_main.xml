@@ -6,8 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".RequestManagement">
 
+    <Button
+        android:id="@+id/btnSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="300dp"
+        android:text="RequestList"
+        android:clickable="true"
+        android:onClick="btnSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-
-
+    <Button
+        android:id="@+id/btnAddTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:text="Test Add"
+        android:clickable="true"
+        android:onClick="btnAddTest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSwitch" />
 </androidx.constraintlayout.widget.ConstraintLayout>
