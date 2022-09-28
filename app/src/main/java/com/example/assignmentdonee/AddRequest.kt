@@ -51,12 +51,12 @@ class AddRequest : AppCompatActivity() {
                 progressDialog.setCancelable(false)
                 progressDialog.show()
 
-                url = "http://192.168.0.103/category/addRequest.php"
+                url = "http://192.168.0.117/request/addRequest.php"
                 if (editar) {
-                    url = "http://192.168.0.103/category/updateRequest.php"
+                    url = "http://192.168.0.117/request/updateRequest.php"
                 }
 
-                val stringRequest = object : StringRequest(Request.Method.POST,
+                val stringRequest = object : StringRequest(Method.POST,
                     url, Response.Listener { response ->
 
                         try {

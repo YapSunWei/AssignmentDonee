@@ -1,4 +1,4 @@
-
+//will show request list then able to delete and edit it
 package com.example.assignmentdonee
 
 import android.app.ProgressDialog
@@ -64,9 +64,9 @@ class RequestDetails:AppCompatActivity() {
 
             v.context.startActivity(i)
         }
-        val URL2: String="http://192.168.0.103/donee/readRequestDetails.php"
+        val URL2: String="http://192.168.0.117/request/readRequestDetails.php"
 
-        val URL1: String="http://192.168.0.103/donee/deleteRequest.php"
+        val URL1: String="http://192.168.0.117/request/deleteRequest.php"
         btnremover.setOnClickListener {
             val lista = arrayOfNulls<String>(2)
             lista[0] = "Yes"
