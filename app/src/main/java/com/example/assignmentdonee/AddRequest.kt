@@ -86,7 +86,7 @@ class AddRequest : AppCompatActivity() {
                         } else {
                             params["PATH"] = "addRequest"
                         }
-                        params["requestID"] = editTextID.text.toString().trim { it <= ' ' }
+                        //params["requestID"] = editTextID.text.toString().trim { it <= ' ' }
                         params["requestFirstName"] = editTextFirstName.text.toString().trim { it <= ' ' }
                         params["requestLastName"] = editTextLastName.text.toString().trim { it <= ' ' }
                         params["requestAddress"] = editTextAddress.text.toString().trim { it <= ' ' }
@@ -115,10 +115,10 @@ class AddRequest : AppCompatActivity() {
 
                 editar = true
 
-                editTextID.setText(
-                    bundle!!.getString("requestID"),
-                    TextView.BufferType.EDITABLE
-                )
+//                editTextID.setText(
+//                    bundle!!.getString("requestID"),
+//                    TextView.BufferType.EDITABLE
+//                )
 
                 editTextFirstName.setText(
                     bundle!!.getString("requestFirstName"),
@@ -165,8 +165,7 @@ class AddRequest : AppCompatActivity() {
     }
 
     private fun testForm(): Boolean {
-        if (editTextID.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
-            || editTextFirstName.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
+        if (editTextFirstName.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
             || editTextLastName.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
             || editTextAddress.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
             || editTextZip.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
@@ -174,6 +173,8 @@ class AddRequest : AppCompatActivity() {
             || editTextState.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
             || editTextPhoneNumber.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
             || editTextReason.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
+            //||editTextID.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
+
         ) {
             Toast.makeText(this, "Fill the entire form.", Toast.LENGTH_SHORT).show()
             return false
