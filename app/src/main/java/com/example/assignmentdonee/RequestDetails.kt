@@ -20,26 +20,25 @@ import com.example.assignmentdonee.model.Requests
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonParser
-import kotlinx.android.synthetic.main.activity_requestdescription.*
+import kotlinx.android.synthetic.main.activity_requestdetails.*
 
 
 import java.util.HashMap
 
 
-
-class RequestDetails:AppCompatActivity() {
-    internal lateinit var progressDialog:ProgressDialog
-    private var jsonParser:JsonParser = JsonParser()
-    private var gson:Gson = Gson()
-    internal lateinit var queue:RequestQueue
-    internal var bundle:Bundle? = null
+class RequestDetails : AppCompatActivity() {
+    internal lateinit var progressDialog: ProgressDialog
+    private var jsonParser: JsonParser = JsonParser()
+    private var gson: Gson = Gson()
+    internal lateinit var queue: RequestQueue
+    internal var bundle: Bundle? = null
     internal lateinit var requests: Requests
 
-    override fun onCreate(savedInstanceState:Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_requestdescription)
+        setContentView(R.layout.activity_requestdetails)
 
-        bundle=intent.extras
+        bundle = intent.extras
         queue = Volley.newRequestQueue(this)
 
         progressDialog = ProgressDialog(this@RequestDetails)
@@ -61,13 +60,14 @@ class RequestDetails:AppCompatActivity() {
             i.putExtra("requestState", requests.requestState)
             i.putExtra("requestPhoneNumber", requests.requestPhoneNumber)
             i.putExtra("requestReason", requests.requestReason)
-            i.putExtra("ID", requests.ID)
+
 
             v.context.startActivity(i)
         }
-        val URL2: String="http://192.168.0.117/request/readRequestDetails.php"
 
-        val URL1: String="http://192.168.0.117/request/deleteRequest.php"
+        val URL1: String = "http://192.168.0.117/request/deleteRequest.php"
+        val URL2: String = "http://192.168.0.117/request/readRequestDetails.php"
+
         btnremover.setOnClickListener {
             val lista = arrayOfNulls<String>(2)
             lista[0] = "Yes"
@@ -77,27 +77,34 @@ class RequestDetails:AppCompatActivity() {
             builder.setItems(lista) { _, which ->
                 if (which == 0) {
 
-                    val stringRequest = object:StringRequest(Request.Method.POST,
+                    val stringRequest = object : StringRequest(Request.Method.POST,
                         URL1, Response.Listener<String> { response ->
                             try {
                                 progressDialog.cancel()
-                                Toast.makeText(this@RequestDetails, response, Toast.LENGTH_LONG).show()
+                                Toast.makeText(this@RequestDetails, response, Toast.LENGTH_LONG)
+                                    .show()
                                 val i = Intent(this@RequestDetails, MainActivity::class.java)
                                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                                 startActivity(i)
-                            } catch (e:Exception) {
-                                Toast.makeText(this@RequestDetails, "Problems communicating with the server.", Toast.LENGTH_SHORT).show()
+                            } catch (e: Exception) {
+                                Toast.makeText(
+                                    this@RequestDetails,
+                                    "Problems communicating with the server.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                                 e.printStackTrace()
                                 progressDialog.cancel()
                             }
                         }, Response.ErrorListener {
                             progressDialog.cancel()
-                            Toast.makeText(this@RequestDetails ,
+                            Toast.makeText(
+                                this@RequestDetails,
                                 "Problems communicating with the server.",
-                                Toast.LENGTH_LONG).show()
+                                Toast.LENGTH_LONG
+                            ).show()
                         }) {
                         @Throws(AuthFailureError::class)
-                        override fun getHeaders():Map<String, String> {
+                        override fun getHeaders(): Map<String, String> {
                             val params = HashMap<String, String>()
                             params["PATH"] = "deleteRequest"
                             params["ID"] = bundle!!.getString("ID")!!
@@ -111,21 +118,24 @@ class RequestDetails:AppCompatActivity() {
             alertDialog.show()
         }
 
-        val stringRequest = object:StringRequest(Request.Method.POST,
+        val stringRequest = object : StringRequest(Request.Method.POST,
             URL2, Response.Listener<String> { response ->
                 try {
                     val mJson = jsonParser.parse(response) as JsonArray
                     requests = gson.fromJson<Requests>(mJson.get(0), Requests::class.java)
 
-                    txtmodelo.text = requests.requestID
-                    txtcor.text = requests.requestFirstName
-                    txtano.text = requests.requestLastName
-
-
-
+                    txtId.text = requests.requestID
+                    txtFirstName.text = requests.requestFirstName
+                    txtLastName.text = requests.requestLastName
+                    txtAddress.text = requests.requestAddress
+                    txtZip.text = requests.requestZip
+                    txtCity.text = requests.requestCity
+                    txtState.text = requests.requestState
+                    txtPhoneNumber.text = requests.requestPhoneNumber
+                    txtReason.text = requests.requestReason
 
                     progressDialog.cancel()
-                } catch (e:Exception) {
+                } catch (e: Exception) {
                     Toast.makeText(this@RequestDetails, "Error.", Toast.LENGTH_SHORT).show()
                     e.printStackTrace()
                     progressDialog.cancel()
@@ -133,16 +143,12 @@ class RequestDetails:AppCompatActivity() {
             }, Response.ErrorListener {
 
 
-
-
                 progressDialog.cancel()
-                Toast.makeText(this@RequestDetails,
-                    "Problem Communicating to server333",
-                    Toast.LENGTH_LONG).show()
+                Toast.makeText(this@RequestDetails, "Problem Communicating to server333", Toast.LENGTH_LONG).show()
             }) {
 
             @Throws(AuthFailureError::class)
-            override fun getHeaders():Map<String, String> {
+            override fun getHeaders(): Map<String, String> {
 
                 val params = HashMap<String, String>()
                 params["PATH"] = "getRequestDetails"

@@ -20,6 +20,9 @@
             android:name=".AddRequest"
             android:exported="true"/>
         <activity
+            android:name=".RequestManagement"
+            android:exported="true"/>
+        <activity
             android:name=".RequestDetails"
             android:exported="true"/>
         <activity

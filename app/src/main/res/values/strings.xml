@@ -18,22 +18,19 @@
     <string name="request_id">requestID</string>
     <string name="firstName">requestFirstName</string>
     <string name="lastName">requestLastName</string>
-    <string name="requestID">Request ID:</string>
-    <string name="requestFirstName">First Name:</string>
-    <string name="requestLastName">Last Name:</string>
-    <string-array name="states">
-        <item>Perak</item>
-        <item>Sabah</item>
-        <item>Kedah</item>
-        <item>Negeri Sembilan</item>
-        <item>Pahang</item>
-        <item>Selangor</item>
-        <item>Perlis</item>
-        <item>Sarawak</item>
-        <item>Johor</item>
-        <item>Terengganu</item>
-        <item>Malacca</item>
-        <item>Kelantan</item>
-        <item>Penang</item>
-    </string-array>
+    <string name="txtId" />
+    <string name="txtFirstName" />
+    <string name="txtLastName" />
+    <string name="txtAddress" />
+    <string name="txtZip" />
+    <string name="txtCity" />
+    <string name="txtState" />
+    <string name="txtPhoneNumber" />
+    <string name="txtReason" />
+    <string name="back">Back</string>
+    <string name="btnEdit">Edit</string>
+    <string name="btnDelete">Delete</string>
+    <string name="menu_requests" />
+    <string name="menu_home" />
+
 </resources>

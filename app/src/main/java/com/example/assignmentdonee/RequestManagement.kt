@@ -6,12 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.request_list.*
-
 import com.android.volley.*
-import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.assignmentdonee.adapter.RequestListAdapter
@@ -19,6 +15,8 @@ import com.example.assignmentdonee.model.Requests
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonParser
+import kotlinx.android.synthetic.main.activity_addrequest.*
+import kotlinx.android.synthetic.main.activity_requestmanagement.*
 import java.util.HashMap
 
 class RequestManagement : AppCompatActivity() {
@@ -34,7 +32,7 @@ class RequestManagement : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.request_list)
+        setContentView(R.layout.activity_requestmanagement)
 
         jsonParser = JsonParser()
         gson = Gson()
@@ -49,6 +47,7 @@ class RequestManagement : AppCompatActivity() {
         carregarLista()
 
     }
+
 
     fun carregarLista() {
         val URL: String = "http://192.168.0.117/request/readRequest.php"
@@ -122,7 +121,6 @@ class RequestManagement : AppCompatActivity() {
         finish()
 
     }
-
 
 }
 
